@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+import pkgHelper.LatinSquare;
+
 public class SudokuTest {
 /*
 	@Test
@@ -257,5 +259,18 @@ public class SudokuTest {
 		
 		assertTrue(Arrays.equals(Region5, s1.getRegion(5)));
 		
+	}
+	
+	@Test
+	public void TestShuffleArray() {
+		int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		int[][] puzzle = {
+				{1, 2, 3}, 
+				{4, 5, 6}, 
+				{7, 8, 9}};
+		Sudoku s1 = new Sudoku(puzzle);
+		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(s1.shuffleArray(arr)));
+		assertTrue(true);
 	}
 }
